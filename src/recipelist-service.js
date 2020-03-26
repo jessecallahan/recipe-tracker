@@ -1,7 +1,7 @@
-export class WeatherService {
-    async getWeatherByCity() {
+export class RecipeGrabber {
+    async getRecipeListByCategory(catName) {
         try {
-            let response = await fetch(`https://www.themealdb.com/api/json/v1/1/categories.php`);
+            let response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?c=${catName}`);
             let jsonifiedResponse;
             if (response.ok && response.status == 200) {
                 jsonifiedResponse = await response.json();
