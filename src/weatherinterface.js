@@ -7,14 +7,8 @@ import { RecipeGrabber } from './../src/recipelist-service.js';
 import { Recipe } from './../src/recipe-service.js';
 
 
-function attachAccountListeners() {
-    $("ul#showRestaurant1").on("click", "li", function () {
-        console.log(this.id);
-    });
 
-}
 $(document).ready(function () {
-    attachAccountListeners();
     $('#categoryName').click(function () {
         const catName = $('#category').val();
 
@@ -25,42 +19,51 @@ $(document).ready(function () {
         })();
 
         function getElements(catNameResponse) {
-            $("#showRestaurant1").html('');
-            for (var i = 0; i < catNameResponse.meals.length; i++) {
-                $("#showRestaurant1").append("<option" + " value=" + `"${catNameResponse.meals[i].strMeal}"` + ">" + catNameResponse.meals[i].strMeal + "</option>");
-                $("#showRestaurant1").show();
+            if (catNameResponse) {
+                $("#showRestaurant1").html('');
+                for (var i = 0; i < catNameResponse.meals.length; i++) {
+                    $("#showRestaurant1").append("<option" + " value=" + `"${catNameResponse.meals[i].strMeal}"` + ">" + catNameResponse.meals[i].strMeal + "</option>");
+                    $("#showRestaurant1").show();
+                    $("#recipeName").show();
 
-
-
-
+                }
+            } else {
+                $("#showRestaurant1").append("Hmmm...didnt work. Try another category.")
             }
-
-
-
-
         }
-
     });
 
     $('#recipeName').click(function () {
         const recipe = $('#showRestaurant1').val();
-        console.log(recipe);
-        (async () => {
 
+        (async () => {
             let newRecipe = new Recipe();
             const recipeResponse = await newRecipe.getRecipe(recipe);
             getElements(recipeResponse);
         })();
-
     });
-    // Promise.all([RecipeGrabber}).then(function (values) {
-    //     console.log(values);
-    // });
-
 
     function getElements(recipeResponse) {
+        if (recipeResponse) {
+            const values = Object.values(recipeResponse.meals[0])
+            console.log(values)
+            for (var i = 0; i < values.length; i++) {
+                if (i >= 9 && i <= 28) {
+                    $("#ingredientsTitle").text("Ingredients:")
+                    $("#ingredients").append("<ul>" + values[i] + "</ul")
+                }
+                if (i >= 29 && i <= 48) {
+                    $("#measurementsTitle").text("Measurements:")
+                    $("#measurements").append("<ul>" + values[i] + "</ul")
+                }
+            }
 
-        $("#output").text(recipeResponse.meals[0].strInstructions)
+            $("#name").text(recipeResponse.meals[0].strMeal)
+            $("#instructionsTitle").text("Instructions:")
+            $("#instructions").text(recipeResponse.meals[0].strInstructions)
+
+        } else {
+            $("#instructions").append("Hmmm...didnt work. Try another recipe.")
+        }
     }
-
 });
