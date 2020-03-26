@@ -46,15 +46,18 @@ $(document).ready(function () {
     function getElements(recipeResponse) {
         if (recipeResponse) {
             const values = Object.values(recipeResponse.meals[0])
-            console.log(values)
+            $("#ingredients").html('');
+            $("#measurements").html('');
             for (var i = 0; i < values.length; i++) {
                 if (i >= 9 && i <= 28) {
                     $("#ingredientsTitle").text("Ingredients:")
                     $("#ingredients").append("<ul>" + values[i] + "</ul")
+                    $("#ingredients").show();
                 }
                 if (i >= 29 && i <= 48) {
                     $("#measurementsTitle").text("Measurements:")
                     $("#measurements").append("<ul>" + values[i] + "</ul")
+                    $("#measurements").show();
                 }
             }
 
