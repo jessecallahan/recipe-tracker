@@ -1,12 +1,12 @@
 body {
     background-color: lightcoral;
   }
-
+  
   ul {
     padding: 0;
     margin: 0;
 }
 
-#showRestaurant1, #recipeName{
+#showCategory, #recipeName{
   display: none;
 }
