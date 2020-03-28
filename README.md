@@ -10,7 +10,7 @@ Returns recipes based on catagory
 
 ## Setup/Installation Requirements
 1) git clone
-2) go to dir in terminal and run build
+2) go to directory in terminal and run build
 3) run start to get recipes!
 
 ## Specs
