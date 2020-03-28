@@ -10,13 +10,13 @@ Returns recipes based on catagory
 
 ## Setup/Installation Requirements
 1) git clone
-2) go to directory in terminal and run build
-3) run start to get recipes!
+2) go to directory in terminal and 'run build'
+3) 'run start' to get recipes!
 
 ## Specs
 
 1) Searchs recipes by category name
-2) Gives you recipes in each
+2) Gives you recipes in each category
 
 ## Technologies Used
 * Npm, webpacks, js.node, api, JS ES6 ...
