@@ -9,7 +9,7 @@ Contact: _**Jessetylercallahan@gmail.com**_</br>
 Returns recipes based on catagory
 
 ## Setup/Installation Requirements
-1) git clone
+1) git clone [repository](https://github.com/jessecallahan/recipe-tracker.git)
 2) go to directory in terminal and 'run build'
 3) 'run start' to get recipes!
 
