@@ -6,13 +6,24 @@ Contact: _**Jessetylercallahan@gmail.com**_</br>
 
 ## Description
 
+Returns recipes based on catagory
 
 ## Setup/Installation Requirements
+1) git clone
+2) go to dir in terminal and run build
+3) run start to get recipes!
 
 ## Specs
+
+1) Searchs recipes by category name
+2) Gives you recipes in each
 
 ## Technologies Used
-* Npm, webpacks, js.node, JEST, JS ES6 ...
+* Npm, webpacks, js.node, api, JS ES6 ...
 
-## Specs
-* Bootstrap style sheet 
+## Tools Used
+JS/CSS/HTML
+
+## Support and contact details
+
+My email is jessetylercallahan@gmail.com. Feel free to email me with questions about my code. I love hearing from people!

@@ -24,7 +24,6 @@ $(document).ready(function () {
           $("#showCategory").append("<option" + " value=" + `"${catNameResponse.meals[i].strMeal}"` + ">" + catNameResponse.meals[i].strMeal + "</option>");
           $("#showCategory").show();
           $("#recipeName").show();
-
         }
       } else {
         $("#showRestaurant1").append("Hmmm...didnt work. Try another category.");
@@ -58,9 +57,7 @@ $(document).ready(function () {
           $("#measurements").append("<ul>" + values[i] + "</ul");
           $("#measurements").show();
         }
-
       }
-
       $("#name").text(recipeResponse.meals[0].strMeal);
       $("#instructionsTitle").text("Instructions:");
       $("#instructions").text(recipeResponse.meals[0].strInstructions);
