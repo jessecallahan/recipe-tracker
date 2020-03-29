@@ -10,8 +10,10 @@ Returns recipes based on catagory
 
 ## Setup/Installation Requirements
 1) git clone [repository](https://github.com/jessecallahan/recipe-tracker.git)
-2) go to directory in terminal and 'run build'
-3) 'run start' to get recipes!
+2) go to directory in terminal and 'npm install'
+3) then 'npm run build'
+4) 'npm run start' to get recipes!
+
 
 ## Specs
 
