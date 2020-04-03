@@ -9,6 +9,8 @@ Contact: _**Jessetylercallahan@gmail.com**_</br>
 Returns recipes based on catagory
 
 ## Setup/Installation Requirements
+Click [link](https://jessecallahan.github.io/recipe-tracker/) to try it out or
+
 1) git clone [repository](https://github.com/jessecallahan/recipe-tracker.git)
 2) go to directory in terminal and 'npm install'
 3) then 'npm run build'
